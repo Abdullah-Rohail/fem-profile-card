@@ -2,14 +2,15 @@
 
 :root{
     --primary-color:hsl(185, 75%, 39%); /*Dark Cyan*/
-    --secondary-color:hsl(0, 0%, 59%); /*Dark Gray*/
-    --size-regular:400;
-    --size-bold:700;
+    --neutral-color:hsl(0, 0%, 59%); /*Dark Gray*/
+    --wght-regular:400;
+    --wght-bold:700;
+    --size:18px;
 }
 body{
     font-family: 'Kumbh Sans', sans-serif;
     font-size: 18px;
-    font-weight: var(--size-regular),var(--size-bold);
+    font-weight: var(--wght-regular),var(--wght-bold);
     text-align: center;
     background: var(--primary-color);
     padding-top: 10%;
@@ -22,7 +23,7 @@ body{
     left: 0px;
     right:0px;
     background-image: url(../images/bg-pattern-top.svg), url(../images/bg-pattern-bottom.svg);
-    background-position: left -100px top -100px, right -160px bottom -100px;
+    background-position: left -100px top -200px, right -100px bottom -200px;
     background-repeat: no-repeat, no-repeat;
     background-origin: content-box;
     background-size: 50%,50%;
@@ -35,7 +36,7 @@ body{
 .container .card{
     position: relative;
     min-width: 350px;
-    max-width: 650px;
+    max-width: 550px;
     width: 100%;
     margin: 0 auto;
     border-radius: 15px;
@@ -45,17 +46,18 @@ body{
     grid-template-rows: 150px 150px auto;
 }
 
-.container .card p,
+.container .card h1,
 .container .card span{
     letter-spacing: 1px;
 }
 
+.container .card h1,
 .container .card p{
-    font-weight: var(--size-bold);
+    font-weight: var(--wght-bold);
 }
 .container .card span{
-    color: var(--secondary-color);
-    font-weight: var(--size-regular);
+    color: var(--neutral-color);
+    font-weight: var(--wght-regular);
     text-shadow: none;
 }
 
@@ -88,7 +90,10 @@ body{
 }
 
 /* STATISTICS */
-
+hr{
+    border-top: 1px solid var(--neutral-color);
+    border-bottom:none;
+}
 .container .card .bottom div{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -97,7 +102,7 @@ body{
 .container .card .bottom div span{
     display: block;
     margin-top: 10px;
-    font-size: 15px;
+    font-size: var(--size);
 }
 
 /* @media only screen and (max-wdith:992px){
