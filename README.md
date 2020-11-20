@@ -1,4 +1,4 @@
-# LIVE App URL
+# LIVE Page URL
 https://abdullah-rohail.github.io/fem-profile-card/
 
 # Frontend Mentor - Profile card component
